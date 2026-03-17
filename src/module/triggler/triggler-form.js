@@ -60,7 +60,7 @@ export class TrigglerForm extends FormApplication {
 			actorModel = CONFIG.Actor.dataModels ?? {};
 			mergedModel = Object.keys(actorModel)
 				.reduce((obj, key) =>
-					foundry.utils.mergeObject(obj, new CONFIG.Actor.documentClass({ name: "CLT Actor", type: key }).toObject().system), {});
+					foundry.utils.mergeObject(obj, new CONFIG.Actor.documentClass({ name: "CLT Actor", type: key }. {}).toObject().system), {});
 		} else {
 			mergedModel = Object.keys(actorModel)
 				.reduce((accumulator, key) => foundry.utils.mergeObject(accumulator, actorModel[key]), {});
